@@ -183,6 +183,10 @@ CUSTOM_LOCALES += \
     cy_GB \
     fur_IT
 
+# SystemUI Customisation
+PRODUCT_PACKAGES += \
+    SystemUICustomOverlay
+
 include vendor/neko/config/version.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
