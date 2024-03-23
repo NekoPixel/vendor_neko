@@ -391,6 +391,12 @@
         <!-- Pixel Launcher -->
         <item>launcher/ENABLE_SMARTSPACE_ENHANCED=true</item>
 
+        <!-- Settings -->
+        <item>settings_ui/bt_slice_settings_enabled=true</item>
+        <item>settings_ui/bt_advanced_header_enabled=true</item>
+        <item>settings_ui/bt_near_by_suggestion_enabled=true</item>
+        <item>settings_ui/bt_le_audio_contact_sharing_enabled=true</item>
+
         <!-- System Ui -->
         <item>systemui/clipboard_overlay_show_actions=true</item>
         <item>systemui/quick_access_wallet_enabled=true</item>
