@@ -22,30 +22,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=1
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.strictmode.disable=true
 endif
 
-# Backup Tool
-PRODUCT_COPY_FILES += \
-    vendor/neko/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/neko/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/neko/prebuilt/common/bin/50-custom.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-custom.sh
-
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/addon.d/50-custom.sh
-
-ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
-PRODUCT_COPY_FILES += \
-    vendor/neko/prebuilt/common/bin/backuptool_ab.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.sh \
-    vendor/neko/prebuilt/common/bin/backuptool_ab.functions:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_ab.functions \
-    vendor/neko/prebuilt/common/bin/backuptool_postinstall.sh:$(TARGET_COPY_OUT_SYSTEM)/bin/backuptool_postinstall.sh
-
-PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    system/bin/backuptool_ab.sh \
-    system/bin/backuptool_ab.functions \
-    system/bin/backuptool_postinstall.sh
-
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.ota.allow_downgrade=true
-endif
 endif
 
 # Enable SIP+VoIP on all targets
