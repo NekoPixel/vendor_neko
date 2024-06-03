@@ -10,6 +10,8 @@ $(call inherit-product, vendor/google/gms/products/gms.mk)
 
 WITH_GAPPS := true
 TARGET_INCLUDE_PIXEL_FRAMEWORKS := true
+TARGET_PIXEL_EXPERIENCE_2022 := true
+TARGET_PIXEL_EXPERIENCE_2023 := true
 
 ifeq ($(TARGET_BUILD_VARIANT),eng)
 # Disable ADB authentication
