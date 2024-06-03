@@ -173,5 +173,6 @@ PRODUCT_PACKAGES += \
     SystemUICustomOverlay
 
 include vendor/neko/config/version.mk
+include vendor/neko/config/art.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
