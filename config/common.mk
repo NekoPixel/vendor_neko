@@ -176,5 +176,6 @@ PRODUCT_PACKAGES += \
 
 include vendor/neko/config/version.mk
 include vendor/neko/config/art.mk
+include vendor/neko-priv/keys/keys.mk
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
